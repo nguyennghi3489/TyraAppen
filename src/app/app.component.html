@@ -1,0 +1,62 @@
+<header>
+  <div (click)="changeLanguage('en')">Eng</div>
+  <div (click)="changeLanguage('swe')">Swe</div>
+	<nav>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">Preschool</a>
+      <div class="control-area hidden-xs-down">
+	      <a class="notification" href="#"><i class="fa fa-bell-o"></i><span class="notification-number">5</span> </a>
+	      <div class="account-area">
+	      	<img src="assets/images/avatar.png">
+	      	<p>
+	      		<span class="welcome-text">Logged in as:</span>
+	      		<span class="username-text">Mr.Bean</span>
+	      	</p>
+	      	
+	      </div>
+	      <a class="setting-icon" href="#"><i class="fa fa-gear"></i></a>
+      </div>
+    </nav>
+</header>
+
+<div class="main container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item dashboard">
+              <a  class="nav-link dashboard" routerLink="" >Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link statistic" routerLink="" href="#">Statistic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link schedule" routerLink="" href="#">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link events" routerLink="" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link contacts" routerLink="" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu" routerLink="" href="#">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link blog" routerLink="/blog" routerLinkActive="active" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link children" routerLink="" href="#">Our Children</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link upload" routerLink="" href="#">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sickleave" routerLink="" href="#">Sickleave</a>
+            </li>
+          </ul>
+        </nav>
+
+        <main class="col-sm-9 col-md-10 ">
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+    </div>

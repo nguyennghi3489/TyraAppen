@@ -1,0 +1,6 @@
+<div class="row" *ngIf="cardList">
+	<div *ngFor="let item of cardList" class="col-md-4 col-xs-12 col-sm-6">
+	  <app-card [card]="item"></app-card>
+	</div>
+</div>
+
