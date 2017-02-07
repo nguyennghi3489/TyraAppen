@@ -9,7 +9,6 @@ export class CardListComponent implements OnInit {
   @Input() cardList : any
 
   constructor() { 
-  	// console.log(this.cardList)
   }
 
   ngOnInit() {
