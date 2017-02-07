@@ -12,7 +12,7 @@ export class BlogComponent {
   cardList:Array<Card> = []
 
   constructor(private blogService:BlogService) { 
-  	blogService.getUser().subscribe((data)=>{
+  	blogService.getUser().take(10).subscribe((data)=>{
       console.log(data);
   		var card = new Card(data);
       this.cardList.push(card);

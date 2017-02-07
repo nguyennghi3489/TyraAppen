@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http }    from '@angular/http';
+import { Headers, Http, URLSearchParams }    from '@angular/http';
 // import 'rxjs';
 // import 'rxjs/add/operator/map';
 // import 'rxjs/add/operator/filter';
@@ -18,15 +18,25 @@ export class BlogService {
   }
 
   getUser(){
-  	return this.http.get('http://tyraserver-alfa.jelastic.elastx.net/parse/classes/blogg_doc',{
-  		headers: this.headers
+     let params: URLSearchParams = new URLSearchParams();
+     params.set('school', "Tyra Demo");
+  	 return this.http.get('http://tyraserver-alfa.jelastic.elastx.net/parse/classes/blogg_doc',{
+  		headers: this.headers,
+      // body: params
+      search: 'where={"school":"Tyra Demo"}'
   	})
     .flatMap(response => {
       let news = response.json().results;
       return Rx.Observable.from(news);
     })
-    .filter(data => {
-      return data["school"] == "Tyra Demo"
-    })
+    // .flatMap((item) => {
+    //       return Rx.Observable.forkJoin(item.images.map((images) => {
+    //         return this.http.get(`/authors/${author.id}`).map(res => res.json());
+    //       });
+    //     });
+
+    // .filter(data => {
+    //   return data["school"] == "Tyra Demo"
+    // })
   }
 }
