@@ -1,9 +1,12 @@
+<h1>{{ 'MENU.DASHBOARD' | translate }}</h1>
 <header>
-  <div (click)="changeLanguage('en')">Eng</div>
-  <div (click)="changeLanguage('swe')">Swe</div>
 	<nav>
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">Preschool</a>
       <div class="control-area hidden-xs-down">
+        <div class="flag-area">
+          <p class="flag en" (click)="changeLanguage('en')">Eng</p>
+          <p class="flag swe" (click)="changeLanguage('swe')">Swe</p>
+        </div>
 	      <a class="notification" href="#"><i class="fa fa-bell-o"></i><span class="notification-number">5</span> </a>
 	      <div class="account-area">
 	      	<img src="assets/images/avatar.png">
@@ -23,34 +26,34 @@
         <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
           <ul class="nav nav-pills flex-column">
             <li class="nav-item dashboard">
-              <a  class="nav-link dashboard" routerLink="" >Dashboard</a>
+              <a  class="nav-link dashboard" routerLink="" >{{ 'MENU.DASHBOARD' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link statistic" routerLink="" href="#">Statistic</a>
+              <a class="nav-link statistic" routerLink="" href="#">{{ 'MENU.STATISTIC' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link schedule" routerLink="" href="#">Schedule</a>
+              <a class="nav-link schedule" routerLink="" href="#">{{ 'MENU.SCHEDULE' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link events" routerLink="" href="#">Events</a>
+              <a class="nav-link events" routerLink="" href="#">{{ 'MENU.EVENTS' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link contacts" routerLink="" href="#">Contacts</a>
+              <a class="nav-link contacts" routerLink="" href="#">{{ 'MENU.CONTACTS' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link menu" routerLink="" href="#">Menu</a>
+              <a class="nav-link menu" routerLink="" href="#">{{ 'MENU.MENU' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link blog" routerLink="/blog" routerLinkActive="active" href="#">Blog</a>
+              <a class="nav-link blog" routerLink="/blog" routerLinkActive="active" href="#">{{ 'MENU.BLOG' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link children" routerLink="" href="#">Our Children</a>
+              <a class="nav-link children" routerLink="" href="#">{{ 'MENU.OURCHILDREN' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link upload" routerLink="" href="#">Upload</a>
+              <a class="nav-link upload" routerLink="" href="#">{{ 'MENU.UPLOAD' | translate }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link sickleave" routerLink="" href="#">Sickleave</a>
+              <a class="nav-link sickleave" routerLink="" href="#">{{ 'MENU.SICKLEAVE' | translate }}</a>
             </li>
           </ul>
         </nav>

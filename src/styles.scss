@@ -40,6 +40,24 @@ header{
 		> .control-area{
 			overflow:hidden;
 			float:right;
+			>.flag-area{
+				>p{
+					display:inline-block;
+					height:50px;
+					line-height:50px;
+					width:40px;
+					cursor: pointer;
+					text-indent:-9999px;
+					&.flag{
+						&.en{
+							background:url("/assets/images/flag/en.png") no-repeat center left;
+						}
+						&.swe{
+							background:url("/assets/images/flag/swe.png") no-repeat center left;
+						}
+					}
+				}
+			}
 			>a{
 				position:relative;
 				i{

@@ -6,6 +6,7 @@ export class Card {
 	updatedDate: string;
 	imageUrl:string;
 	content:string;
+	school:string;
 
 	datePipeEn: DatePipe = new DatePipe('en-US')
 

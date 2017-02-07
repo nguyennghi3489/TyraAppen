@@ -3,5 +3,17 @@
     "TITLE": "Hello Angular 2 with ng2-translate!",
     "SELECT": "Change language"
   },
+  "MENU": {
+    "DASHBOARD": "Dashboard",
+    "STATISTIC": "Statistic",
+    "SCHEDULE": "Schedule",
+    "EVENTS": "Events",
+    "CONTACTS": "Contacts",
+    "MENU": "Menu",
+    "BLOG": "Blog",
+    "OURCHILDREN": "Our Children",
+    "UPLOAD": "Upload",
+    "SICKLEAVE": "Sickleave"
+  },
   "LAZY": "I'm lazy loaded!"
 }

@@ -3,5 +3,17 @@
     "TITLE": "Hello Angular 2 with ng2-translate!",
     "SELECT": "Change language"
   },
+  "MENU": {
+    "DASHBOARD": "Instrumentbräda",
+    "STATISTIC": "Statistisk",
+    "SCHEDULE": "Schema",
+    "EVENTS": "Evenemang",
+    "CONTACTS": "Kontakter",
+    "MENU": "Meny",
+    "BLOG": "Blogg",
+    "OURCHILDREN": "Våra barn",
+    "UPLOAD": "Ladda upp",
+    "SICKLEAVE": "Sjukskriven"
+  },
   "LAZY": "I'm lazy loaded! in Swedish"
 }
