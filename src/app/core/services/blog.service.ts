@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, URLSearchParams }    from '@angular/http';
+import { environment } from '../../../environments/environment';
 import * as Rx from 'rxjs';
 @Injectable()
 export class BlogService {
@@ -8,15 +9,15 @@ export class BlogService {
 	private http:Http;
   constructor(http: Http) {
   	this.http = http;
-  	this.headers.append('X-Parse-Application-Id','12345');
-  	this.headers.append('X-Parse-REST-API-Key','xyz');
+  	this.headers.append('X-Parse-Application-Id',environment.XParseApplicationId);
+  	this.headers.append('X-Parse-REST-API-Key',environment.XParseRESTAPIKey);
   }
 
   getDemoBlog(){
     let params: URLSearchParams = new URLSearchParams();
     params.set('school', "Tyra Demo");
     if(!this.data){
-    	this.data = this.http.get('http://tyraserver-alfa.jelastic.elastx.net/parse/classes/blogg_doc',{
+    	this.data = this.http.get(environment.TyraAPIUrl+'/classes/blogg_doc',{
     		headers: this.headers,
         search: 'where={"school":"Tyra Demo"}'
     	})
